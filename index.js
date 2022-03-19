@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const path = require("path");
 
 
@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 
 
 app.get("/", function(req, res){
-    res.render("index");
+    res.render("index", { BlueEdtech: "BlueEdtech" });
 });
 
 app.post("/", function(req, res){
