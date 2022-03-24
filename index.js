@@ -6,6 +6,7 @@ const port = process.env.PORT || 3000;
 const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
+app.use(express.urlencoded());
 
 const pokedex = [
     {
@@ -37,7 +38,7 @@ const pokedex = [
 //     res.send("Olá Mundo")
 // });
 
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     res.render("index", {pokedex});
 });
 
@@ -45,5 +46,14 @@ app.get("/cadastro", (req, res) => {
     res.render("cadastro")
     
 });
+
+
+app.post("/subscription", (req, res) => {
+    const { nome, email } = req.body;
+    res.send({ nome: nome, email: email });
+    res.send("Formulário Recebido!");
+  });
+
+
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));

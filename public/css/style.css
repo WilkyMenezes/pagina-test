@@ -94,6 +94,7 @@ section#cards div.card:hover {
   transition: 0.5s;
   border-radius: 1rem;
   transform: translateX(8px);
+  background-color: rgba(165, 42, 42, 0.418);
 
 }
 
