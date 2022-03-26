@@ -116,7 +116,7 @@ section#cadastro form input{
   outline: none;
   margin: 0 1rem 1rem 1rem;
   background-color: rgba(0, 255, 255, 0.219);
-  color: rgb(255, 221, 71);
+  color: rgb(0, 0, 0);
   box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
 
 }
