@@ -15,7 +15,6 @@ body{
   position: absolute;
   right: 0;
   top: 0;
-  height: 100rem;
   margin: 0;
   box-sizing: border-box;
 
@@ -23,16 +22,6 @@ body{
 
 }
 
-
-header {
-  padding: 6rem;
-  background-color: rgba(165, 42, 42, 0.418);
-  color: aliceblue;
-  border-radius: .9rem;
-  
-  
-
-}
 
 header h1{
   text-align: center;

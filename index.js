@@ -1,8 +1,11 @@
+require("dotenv").config();
+
 const express = require("express");
 const req = require("express/lib/request");
 const { get } = require("express/lib/response");
 const res = require("express/lib/response");
 const app = express();
+
 const port = process.env.PORT || 3000;
 const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
@@ -13,14 +16,13 @@ app.use(express.urlencoded());
 let message = "";
 
 
-
 const pokedex = [
     {
     id: 1,
     nome: "Blastoise",
     tipo: "Water",
     categoia: "Shellfish",
-    detalhes: "",
+    detalhes: "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
 },
 
@@ -29,7 +31,7 @@ const pokedex = [
     nome: "Metapod",
     tipo: "Bug",
     categoia: "Cocoon",
-    detalhes: "",
+    detalhes: "It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
 },
 {
@@ -37,7 +39,7 @@ const pokedex = [
     nome: "Arbok",
     tipo: "Poison",
     categoia: "Cobra",
-    detalhes: "",
+    detalhes: "The frightening patterns on its belly have been studied. Six variations have been confirmed.",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
 }
 ]
@@ -72,9 +74,5 @@ app.get("/detalhes", (req, res) => {
     res.render("detalhes", {pokedex});
 
 });
-
-
-
-
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));

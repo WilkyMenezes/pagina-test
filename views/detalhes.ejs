@@ -17,6 +17,20 @@
         </ul>
     </nav>
     <h1>Detalhamento de Pokemons</h1>
+
+    <section id="cards">            
+        <% pokedex.forEach((pokemon) => { %>
+
+            <div class="card">
+                <img src="<%= pokemon.imagem %>" alt="">
+                <h2><%= pokemon.nome %></h2>
+                <p><%= pokemon.categoia %></p>
+                <p><%= pokemon.tipo %></p>
+                <p><%= pokemon.detalhes %></p>
+            </div>
+
+        <% }) %>
+    </section>
     
 </body>
 </html>
