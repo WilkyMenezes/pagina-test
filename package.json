@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WilkyMenezes/pagina-test.git"
+    "url": "git+https://github.com/WilkyMenezes/pokedex-blue"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WilkyMenezes/pagina-test/issues"
+    "url": "https://github.com/WilkyMenezes/pokedex-blue/issues"
   },
-  "homepage": "https://github.com/WilkyMenezes/pagina-test#readme",
+  "homepage": "https://github.com/WilkyMenezes/pokedex-blue#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
