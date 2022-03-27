@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pr-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
 
     <nav>
         <ul id="menu">
@@ -40,6 +39,7 @@
                 <h2><%= pokemon.nome %></h2>
                 <p><%= pokemon.categoia %></p>
                 <p><%= pokemon.tipo %></p>
+                <p><a href="/detalhes/<%= pokemon.id %>">Detalhar</a></p>
             </div>
 
         <% }) %>

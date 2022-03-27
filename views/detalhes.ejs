@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Detalhes</title>
 </head>
+
 
 <body>
     <nav>
@@ -18,19 +19,16 @@
     </nav>
     <h1>Detalhamento de Pokemons</h1>
 
-    <section id="cards">            
-        <% pokedex.forEach((pokemon) => { %>
-
-            <div class="card">
-                <img src="<%= pokemon.imagem %>" alt="">
-                <h2><%= pokemon.nome %></h2>
-                <p><%= pokemon.categoia %></p>
-                <p><%= pokemon.tipo %></p>
-                <p><%= pokemon.detalhes %></p>
-            </div>
-
-        <% }) %>
-    </section>
-    
+    <main>
+        <section id="cards">   
+                <div class="card">
+                    <img src="<%= pokemon.imagem %>" alt="">
+                    <h2><%= pokemon.nome %></h2>
+                    <p><%= pokemon.categoia %></p>
+                    <p><%= pokemon.tipo %></p>
+                    <p><a href="/detalhes/<%= pokemon.id %>">Detalhar</a></p>
+                </div>
+        </section>
+    </main>
 </body>
 </html>

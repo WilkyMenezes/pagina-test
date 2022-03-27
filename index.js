@@ -14,7 +14,8 @@ app.use(express.urlencoded());
 
 // variavel para receber dados //
 let message = "";
-
+let pokemon = "";
+let id = "";
 
 const pokedex = [
     {
@@ -49,29 +50,44 @@ const pokedex = [
 //     res.send("Olá Mundo")
 // });
 
+
 app.get("/", (req, res) => {
-    res.render("index", {pokedex,message});
+    res.render("index", {pokedex, message, pokemon});
 });
 
 app.get("/cadastro", (req, res) => {
-    res.render("cadastro", {pokedex});
+    res.render("cadastro", {pokedex });
 
 });
 
 app.post("/cadastro", (req, res) => {
     const pokemon = req.body;
+    pokemon.id = pokedex.length + 1;
     pokedex.push(pokemon);
+    
     message = "Parabéns, seu Pokemon foi cadastrado com sucesso!";
     setTimeout(() => {
         message = "";
       }, 1000);
-
     res.redirect("/")
 
 });
 
-app.get("/detalhes", (req, res) => {
-    res.render("detalhes", {pokedex});
+// app.get("/update/:id", (req, res) => {
+//     const id = +req.params.id;
+//     const pokemon = pokedex.find(pokemon => pokemon.id === id);
+//     res.render("update",{pokemon, pokedex})
+
+// });
+
+
+
+
+
+app.get("/detalhes/:id", (req, res) => {
+    id = +req.params.id;
+    pokemon = pokedex.find(pokemon => pokemon.id === id);
+    res.render("detalhes", {pokedex, pokemon});
 
 });
 
