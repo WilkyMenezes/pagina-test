@@ -22,7 +22,10 @@ const pokedex = [
     id: 1,
     nome: "Blastoise",
     tipo: "Water",
-    categoia: "Shellfish",
+    altura: "1.6 m",
+    peso: "85.5 kg",
+    categoria: "Shellfish",
+    habilidade: "Torrent",
     detalhes: "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
 },
@@ -31,7 +34,10 @@ const pokedex = [
     id: 2,
     nome: "Metapod",
     tipo: "Bug",
-    categoia: "Cocoon",
+    altura: "0.7 m",
+    peso: "9.9 kg",
+    categoria: "Cocoon",
+    habilidade: "Shed Skin",
     detalhes: "It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
 },
@@ -39,9 +45,13 @@ const pokedex = [
     id: 3,
     nome: "Arbok",
     tipo: "Poison",
-    categoia: "Cobra",
+    altura: "3.5 m",
+    peso: "65.0 kg",
+    categoria: "Cobra",
+    habilidade: "Shed Skin",
     detalhes: "The frightening patterns on its belly have been studied. Six variations have been confirmed.",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+
 }
 ]
 
@@ -90,5 +100,6 @@ app.get("/detalhes/:id", (req, res) => {
     res.render("detalhes", {pokedex, pokemon});
 
 });
+
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));

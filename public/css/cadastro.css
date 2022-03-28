@@ -20,6 +20,22 @@ body{
   box-sizing: border-box;
 }
 
+#global {
+    background-color: rgba(240, 248, 255, 0.548);
+    padding: 1rem;
+    
+
+}
+
+.sent {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+
 header {
   padding: 3rem;
 }
@@ -33,9 +49,6 @@ header h1{
 }
 
 
-h2 {
-  margin-top: 14rem;
-}
 
 main {
   margin: 0 10rem 0 10rem;
@@ -67,6 +80,7 @@ section#cards div.card img {
 
 section#cards div.card h2 {
   margin: 1rem;
+  margin-left: 2rem;
 }
 
 section#cards div.card p {
@@ -85,9 +99,8 @@ section#cards div.card:hover {
 }
 
 section#cadastro{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    width: 100%;
+
   
 }
 
@@ -105,7 +118,7 @@ section#cadastro h2 {
 }
 
 section#cadastro form input{
-  width: 95%;
+  width: 100%;
   padding: .7em;
   font-size: 1rem;
   border: solid 3px;
@@ -170,6 +183,10 @@ button {
   background-color: rgba(0, 0, 0, 0.644);
   
 }
+
+
+
+
 
 
 
